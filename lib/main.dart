@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
+
         routes: {
           "/first": (context) => const  Xender(),
         },

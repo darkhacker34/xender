@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Image.asset('assets/splash_logo.png',width: wt*0.04,),
               SizedBox(width: wt*0.01,),
-              Text('xender',)
+              Text('xender')
             ],
           ),
         ),

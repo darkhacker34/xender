@@ -1,0 +1,28 @@
+name: Build & Release APK
+
+on:
+  push:
+    tags:
+      - 'v1.0.0' # triggers on version tags like v1.0.0
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.5.4' # Use your Flutter version
+
+      - run: flutter pub get
+      - run: flutter build apk --release
+
+      - name: Upload Release APK
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
