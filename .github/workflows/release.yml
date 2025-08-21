@@ -3,7 +3,7 @@ name: Build and Release APK
 on:
   push:
     tags:
-      - 'v1.0.0'  # Triggers on version tags like v1.0.0
+      - 'v*'  # This will trigger on any tag starting with 'v' (v1.0.0, v1.0.1, v2.0.0, etc.)
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
