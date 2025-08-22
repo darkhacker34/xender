@@ -280,7 +280,6 @@ class _HomePState extends State<HomeP> {
           ),
         ),
         body: TabBarView(
-
             children: [
               History(),
               Download(),
@@ -289,7 +288,6 @@ class _HomePState extends State<HomeP> {
               Music(),
               Video(),
               FilePage(),
-
             ]
         ),
       ),
